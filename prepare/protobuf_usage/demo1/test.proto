@@ -1,0 +1,13 @@
+syntax = "proto3";
+package demo1;
+message Test {
+    string name  = 1;
+    int32 stature = 2 ;
+    repeated int64 weight  = 3;
+    string motto = 4;
+}
+
+
+
+//当前目录下编译proto文件，生成go类型的proto文件
+//protoc --go_out=./ *.proto
