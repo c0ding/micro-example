@@ -1,0 +1,21 @@
+syntax = "proto3";
+package demo2;
+
+service getInfoServer {
+    rpc GetName (InfoRequest) returns (SchoolResponse);
+    rpc GetAge (InfoRequest) returns (AgeResponse);
+}
+
+message InfoRequest {
+    string stuName =1;
+}
+
+message SchoolResponse {
+    string schoolName =1;
+}
+
+message AgeResponse {
+    int32 age =1;
+}
+
+
